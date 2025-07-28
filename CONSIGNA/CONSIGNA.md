@@ -30,21 +30,43 @@ Y validar lo siguiente:
 ✅ La edad debe ser mayor o igual a 18 años.
 
 ---
+## 🏗 Estructura del proyecto
 
+```css
+
+├── src/
+│   ├── main/
+│   │   ├── java/com/example/pipeline_validation/
+│   │   │   ├── controller/ClienteController.java
+│   │   │   ├── model/Cliente.java
+│   │   │   ├── pipeline/
+│   │   │   │   ├── Validador.java
+│   │   │   │   ├── NombreValidador.java
+│   │   │   │   ├── EmailValidador.java
+│   │   │   │   ├── EdadValidador.java
+│   │   │   │   └── PipelineService.java
+│   │   │   └── PipelineValidationApplication.java
+├── pom.xml
+└── README.md
+
+```
+
+---
 ## 🛠️ Requisitos técnicos
-Usar Java 17+.
+- Usar Java 17+.
 
-Usar Spring Boot.
+- Usar Spring Boot.
 
-Aplicar el patrón Pipeline para implementar las validaciones.
+- Aplicar el patrón Pipeline para implementar las validaciones.
 
-Cada validación debe ser una clase independiente que implemente una interfaz común.
+- Cada validación debe ser una clase independiente que implemente una interfaz común.
 
-Las validaciones deben ejecutarse en orden, y si alguna falla, detener el flujo y devolver un mensaje de error apropiado.
+- Las validaciones deben ejecutarse en orden, y si alguna falla, detener el flujo y devolver un mensaje de error apropiado.
 
 ---
 
 ## 📤 Endpoint esperado
+
 POST /clientes
 
 - Content-Type: application/json
